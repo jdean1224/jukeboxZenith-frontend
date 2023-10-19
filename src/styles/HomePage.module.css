@@ -60,14 +60,33 @@
 
 .artistName {
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: sans-serif;
+  margin-top: 4px;
 }
 
 .artistCoverImage {
-  height: 300px;
+  height: 260px;
+  width: 400px;
 }
 
 .artistContainer {
+  width: 100vw;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 34px;
+  padding: 40px 36px 0px 36px;
+}
+
+.artistProfile {
+  height: 290px;
+  width: fit-content;
+  text-align: center;
+  display: block;
+  position: relative;
+}
+
+.link {
+  text-decoration: none;
 }

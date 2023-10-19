@@ -40,8 +40,8 @@ function HomePage() {
       {/* Artist Area Starts !!!!!!!!!!!!!!!!!!*/}
       <div className={styles.artistContainer}>
         {artistData.map((artist) => (
-          <div key={artist._id}>
-            <Link to={`/artist/${artist._id}`}>
+          <div className={styles.artistProfile} key={artist._id}>
+            <Link className={styles.link} to={`/artist/${artist._id}`}>
               <img
                 className={styles.artistCoverImage}
                 src={`http://localhost:5890/static/images/${artist.coverImage}`}

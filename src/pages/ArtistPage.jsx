@@ -5,6 +5,10 @@ import JesusAndMaryChain from './Artist/JesusAndMaryChain';
 import LeonardCohen from './Artist/LeonardCohen';
 import PJHarvey from './Artist/PJHarvey';
 import TheCramps from './Artist/TheCramps';
+import Ween from './Artist/Ween';
+import FrankBlack from './Artist/FrankBlack';
+import FlamingLips from './Artist/FlamingLips';
+import GuidedByVoices from './Artist/GuidedByVoices';
 
 function ArtistPage() {
   const { id } = useParams();
@@ -36,6 +40,10 @@ function ArtistPage() {
       {artist.name === 'Leonard Cohen' && <LeonardCohen artist={artist} />}
       {artist.name === 'PJ Harvey' && <PJHarvey artist={artist} />}
       {artist.name === 'The Cramps' && <TheCramps artist={artist} />}
+      {artist.name === 'Ween' && <Ween artist={artist} />}
+      {artist.name === 'Frank Black' && <FrankBlack artist={artist} />}
+      {artist.name === 'Flaming Lips' && <FlamingLips artist={artist} />}
+      {artist.name === 'Guided By Voices' && <GuidedByVoices artist={artist} />}
     </>
   );
 }
