@@ -67,3 +67,7 @@
 .artistCoverImage {
   height: 300px;
 }
+
+.artistContainer {
+  display: flex;
+}

@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import JesusAndMaryChain from './Artist/JesusAndMaryChain';
+import LeonardCohen from './Artist/LeonardCohen';
+import PJHarvey from './Artist/PJHarvey';
+import TheCramps from './Artist/TheCramps';
 
 function ArtistPage() {
   const { id } = useParams();
@@ -25,13 +29,14 @@ function ArtistPage() {
   // if (!artist) return <div>Loading...</div>;
 
   return (
-    <div>
-      <img
-        src={`http://localhost:5890/static/images/${artist.coverImage}`}
-        alt={artist.name}
-      />
-      <h1>{artist.name}</h1>
-    </div>
+    <>
+      {artist.name === 'Jesus and Mary Chain' && (
+        <JesusAndMaryChain artist={artist} />
+      )}
+      {artist.name === 'Leonard Cohen' && <LeonardCohen artist={artist} />}
+      {artist.name === 'PJ Harvey' && <PJHarvey artist={artist} />}
+      {artist.name === 'The Cramps' && <TheCramps artist={artist} />}
+    </>
   );
 }
 

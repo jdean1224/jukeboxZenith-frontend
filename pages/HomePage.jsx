@@ -38,18 +38,20 @@ function HomePage() {
       {/* Header Ends!!!!!!!!!!!!!!!!!!!!!!!!*/}
 
       {/* Artist Area Starts !!!!!!!!!!!!!!!!!!*/}
-      {artistData.map((artist) => (
-        <div key={artist._id}>
-          <Link to={`/artist/${artist._id}`}>
-            <img
-              className={styles.artistCoverImage}
-              src={`http://localhost:5890/static/images/${artist.coverImage}`}
-              alt={artist.name}
-            />
-            <p className={styles.artistName}>{artist.name}</p>
-          </Link>
-        </div>
-      ))}
+      <div className={styles.artistContainer}>
+        {artistData.map((artist) => (
+          <div key={artist._id}>
+            <Link to={`/artist/${artist._id}`}>
+              <img
+                className={styles.artistCoverImage}
+                src={`http://localhost:5890/static/images/${artist.coverImage}`}
+                alt={artist.name}
+              />
+              <p className={styles.artistName}>{artist.name}</p>
+            </Link>
+          </div>
+        ))}
+      </div>
       {/* Artist Area Ends!!!!!!!!!!!!!!!!!!!!!*/}
     </div>
   );
